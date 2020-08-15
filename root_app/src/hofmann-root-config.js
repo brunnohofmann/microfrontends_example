@@ -1,18 +1,11 @@
-import { registerApplication, start } from "single-spa";
+import { registerApplication, start } from 'single-spa';
 
-registerApplication({
-  name: "@hofmann/users",
-  app: () =>
-    System.import(
-      "@hofmann/users"
-    ),
-  activeWhen: ["/"],
-});
+export default () => {
+  registerApplication({
+    name: '@hofmann/users',
+    app: () => System.import('@hofmann/users'),
+    activeWhen: ['/users'],
+  });
 
-// registerApplication({
-//   name: "@hofmann/navbar",
-//   app: () => System.import("@hofmann/navbar"),
-//   activeWhen: ["/"]
-// });
-
-start();
+  start();
+};
