@@ -1,5 +1,6 @@
 import React from "react";
+import {Button} from '@antd'
 
 export default function Root(props) {
-  return <section>{props.name} is mounted!</section>;
+  return <Button>{props.name} is mounted!</Button>;
 }

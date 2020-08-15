@@ -8,6 +8,8 @@ module.exports = (webpackConfigEnv) => {
     webpackConfigEnv,
   });
 
+  defaultConfig.externals.push('@antd');
+
   return webpackMerge.smart(defaultConfig, {
     // modify the webpack config however you'd like to by adding to this object
   });
