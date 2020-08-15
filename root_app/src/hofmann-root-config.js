@@ -1,10 +1,10 @@
 import { registerApplication, start } from "single-spa";
 
 registerApplication({
-  name: "@single-spa/welcome",
+  name: "@hofmann/users",
   app: () =>
     System.import(
-      "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js"
+      "@hofmann/users"
     ),
   activeWhen: ["/"],
 });
@@ -15,6 +15,4 @@ registerApplication({
 //   activeWhen: ["/"]
 // });
 
-start({
-  urlRerouteOnly: true,
-});
+start();
